@@ -9,3 +9,4 @@ RUN wget -qO "$script" "$url" \
  && chmod 0755 "$script" /usr/local/bin/certbot.sh
 
 CMD /usr/local/bin/certbot.sh
+ENTRYPOINT []
