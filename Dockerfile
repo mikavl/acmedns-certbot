@@ -5,7 +5,7 @@ ARG url="https://raw.githubusercontent.com/mikavl/acme-dns-certbot-joohoi/kubern
 
 COPY --chown=root:root certbot.sh /usr/local/bin/certbot.sh
 
-RUN curl -sSLo "$script" "$url" \
+RUN wget -qO "$script" "$url" \
  && chmod 0755 "$script" /usr/local/bin/certbot.sh
 
 CMD /usr/local/bin/certbot.sh
